@@ -10,14 +10,14 @@ import '../bloc/upload/upload_cubit.dart';
 import '../widgets/show_uploading_dialog_box.dart';
 import 'camera_page.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class UploadPage extends StatefulWidget {
+  const UploadPage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<UploadPage> createState() => _UploadPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _UploadPageState extends State<UploadPage> {
   Future<File?> uploadFile() async {
     FilePickerResult? result = await FilePicker.platform.pickFiles(
       type: FileType.custom,

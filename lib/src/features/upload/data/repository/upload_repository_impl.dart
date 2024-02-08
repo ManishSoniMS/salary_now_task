@@ -9,7 +9,7 @@ import 'package:salary_now_task/src/features/upload/domain/repository/upload_rep
 
 @LazySingleton(as: UploadRepository)
 class UploadRepositoryImpl implements UploadRepository {
-  UploadRepositoryImpl(this._source) ;
+  UploadRepositoryImpl(this._source);
 
   final IUploadSource _source;
 

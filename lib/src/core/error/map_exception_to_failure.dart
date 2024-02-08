@@ -19,7 +19,9 @@ Failure mapExceptionToFailure(Object? e) {
   }
 
   return Failure(
-    message: (e as dynamic)["msg"] ?? (e as dynamic)["message"]?? "Something went wrong",
+    message: (e as dynamic)["msg"] ??
+        (e as dynamic)["message"] ??
+        "Something went wrong",
     code: FailureCodes.UNKNOWN_ERROR,
   );
 }

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:camera/camera.dart';
@@ -93,7 +94,7 @@ class TakePictureScreenState extends State<TakePictureScreen> {
               );
             } catch (e) {
               // If an error occurs, log the error to the console.
-              print(e);
+              log(e.toString());
             }
           },
           child: const Icon(Icons.camera_alt),
@@ -122,8 +123,8 @@ class DisplayPictureScreen extends StatelessWidget {
             ElevatedButton.icon(
               onPressed: () {
                 context.read<UploadCubit>().uploadImage(File(imagePath));
-                Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(builder: (context) => const HomePage()));
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    builder: (context) => const UploadPage()));
               },
               icon: const Icon(Icons.check),
               label: const Text("Upload"),

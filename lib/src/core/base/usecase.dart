@@ -10,5 +10,3 @@ abstract class IUseCase<ReturnType, Params> {
   /// an override of `call` to execute this use case
   FailureOr<ReturnType> call(Params param);
 }
-
-

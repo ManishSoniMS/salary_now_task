@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:salary_now_task/src/features/home_page.dart';
 
 import '../../features/upload/presentation/bloc/upload/upload_cubit.dart';
-import '../../features/upload/presentation/pages/home_page.dart';
 import 'injection/injection.dart';
 
 class MyApp extends StatelessWidget {
